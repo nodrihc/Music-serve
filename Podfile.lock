@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: 9c1146ff24cc803ff2200a767e959b16d090bc21
+PODS:
+  - Alamofire (4.5.0)
+  - GCDWebServer (3.4):
+    - GCDWebServer/Core (= 3.4)
+  - GCDWebServer/Core (3.4)
+  - GCDWebServer/WebUploader (3.4):
+    - GCDWebServer/WebUploader/Core (= 3.4)
+  - GCDWebServer/WebUploader/Core (3.4):
+    - GCDWebServer/Core
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - GCDWebServer (~> 3.0)
+  - GCDWebServer/WebUploader (~> 3.0)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  GCDWebServer: 20d53c3181b3c78d865e93e326faf506306f5338
+
+PODFILE CHECKSUM: 240b2c8111c769abbc59551528e4ed45a34c5dd2
 
 COCOAPODS: 1.3.1
