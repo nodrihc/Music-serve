@@ -89,6 +89,12 @@ class Server
         
     }
     
+    func stopServ()
+    {
+        webServer.removeAllHandlers();
+        webServer.stop();
+    }
+    
     
     
 

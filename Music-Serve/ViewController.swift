@@ -10,11 +10,11 @@ import Foundation
 import GCDWebServer
 
 class ViewController: UIViewController {
-
+let serveur = Server()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-  
+   
  
     }
 
@@ -23,8 +23,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func stopServer(_ sender: UIButton) {
+        serveur.stopServ()
+    }
     @IBAction func startServer(_ sender: UIButton) {
-        let serveur = Server()
+       
         serveur.runServer()
     }
 }
