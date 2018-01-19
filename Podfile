@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
@@ -7,4 +8,7 @@ target 'Music-Serve' do
 
   # Pods for Music-Serve
 
+pod 'Alamofire', '~> 4.5'
+pod 'GCDWebServer/WebUploader', '~> 3.0'
+pod 'GCDWebServer', '~> 3.0'
 end
