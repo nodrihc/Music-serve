@@ -31,7 +31,6 @@ class Server
         var songArtist : String = "chichi"
         var songAlbum : String = "chirdon"
         var songPath : String! = ""
-        var songPath2 : String = ""
         
         
         //Get the differents path
@@ -64,10 +63,8 @@ class Server
             songTitle = items.title!
             songArtist = items.artist!
             songAlbum = items.albumTitle!
-            songPath2 = String (describing: items.accessibilityPath)
             songPath = (items.assetURL?.absoluteString)!
             
-            print(songPath2)
             theIndexString += "<li data-title=\"" + songTitle + "\" data-artist=\"" + songArtist + " (" + songAlbum + ")\" data-type=\"mp3\" data-url=\"" + songPath + "\" data-free=\"false\"></li>"
         }
        
