@@ -16,6 +16,7 @@
 		DCA610022010EB4B00687EF6 /* player.css in Resources */ = {isa = PBXBuildFile; fileRef = DCA60FFF2010EB4B00687EF6 /* player.css */; };
 		DCA610032010EB4C00687EF6 /* jquery.cleanaudioplayer.js in Resources */ = {isa = PBXBuildFile; fileRef = DCA610002010EB4B00687EF6 /* jquery.cleanaudioplayer.js */; };
 		DCA610042010EB4C00687EF6 /* jquery-1.11.3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = DCA610012010EB4B00687EF6 /* jquery-1.11.3.min.js */; };
+		DCA6100620116E3B00687EF6 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6100520116E3A00687EF6 /* Server.swift */; };
 		FA390A7DFC6F1AF9C4F9CE50 /* Pods_Music_Serve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB77F4E44B2C0A951D96292E /* Pods_Music_Serve.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		DCA60FFF2010EB4B00687EF6 /* player.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = player.css; path = ../../../assets/player.css; sourceTree = "<group>"; };
 		DCA610002010EB4B00687EF6 /* jquery.cleanaudioplayer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.cleanaudioplayer.js; path = ../../../assets/jquery.cleanaudioplayer.js; sourceTree = "<group>"; };
 		DCA610012010EB4B00687EF6 /* jquery-1.11.3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-1.11.3.min.js"; path = "../../../assets/jquery-1.11.3.min.js"; sourceTree = "<group>"; };
+		DCA6100520116E3A00687EF6 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				DC3076AE1FFEDA3400BC50EE /* LaunchScreen.storyboard */,
 				DC3076B11FFEDA3400BC50EE /* Info.plist */,
 				DC3076A91FFEDA3400BC50EE /* Music_Serve.xcdatamodeld */,
+				DCA6100520116E3A00687EF6 /* Server.swift */,
 			);
 			path = "Music-Serve";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				DC3076A51FFEDA3400BC50EE /* ViewController.swift in Sources */,
 				DC3076AB1FFEDA3400BC50EE /* Music_Serve.xcdatamodeld in Sources */,
+				DCA6100620116E3B00687EF6 /* Server.swift in Sources */,
 				DC3076A31FFEDA3400BC50EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
