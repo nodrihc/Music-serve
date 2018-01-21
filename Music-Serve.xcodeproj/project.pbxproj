@@ -13,10 +13,12 @@
 		DC3076AB1FFEDA3400BC50EE /* Music_Serve.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC3076A91FFEDA3400BC50EE /* Music_Serve.xcdatamodeld */; };
 		DC3076AD1FFEDA3400BC50EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3076AC1FFEDA3400BC50EE /* Assets.xcassets */; };
 		DC3076B01FFEDA3400BC50EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3076AE1FFEDA3400BC50EE /* LaunchScreen.storyboard */; };
-		DCA610022010EB4B00687EF6 /* player.css in Resources */ = {isa = PBXBuildFile; fileRef = DCA60FFF2010EB4B00687EF6 /* player.css */; };
-		DCA610032010EB4C00687EF6 /* jquery.cleanaudioplayer.js in Resources */ = {isa = PBXBuildFile; fileRef = DCA610002010EB4B00687EF6 /* jquery.cleanaudioplayer.js */; };
-		DCA610042010EB4C00687EF6 /* jquery-1.11.3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = DCA610012010EB4B00687EF6 /* jquery-1.11.3.min.js */; };
 		DCA6100620116E3B00687EF6 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6100520116E3A00687EF6 /* Server.swift */; };
+		DCF2998E2014929C009477F8 /* jquery-1.11.3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = DCF2998B2014929C009477F8 /* jquery-1.11.3.min.js */; };
+		DCF2998F2014929C009477F8 /* jquery.cleanaudioplayer.js in Resources */ = {isa = PBXBuildFile; fileRef = DCF2998C2014929C009477F8 /* jquery.cleanaudioplayer.js */; };
+		DCF299902014929C009477F8 /* player.css in Resources */ = {isa = PBXBuildFile; fileRef = DCF2998D2014929C009477F8 /* player.css */; };
+		DCF2999420149BED009477F8 /* jquery.cleanaudioplayer.js in Resources */ = {isa = PBXBuildFile; fileRef = DCF2999120149BD5009477F8 /* jquery.cleanaudioplayer.js */; };
+		DCF2999520149BED009477F8 /* jquery-1.11.3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = DCF2999220149BD6009477F8 /* jquery-1.11.3.min.js */; };
 		FA390A7DFC6F1AF9C4F9CE50 /* Pods_Music_Serve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB77F4E44B2C0A951D96292E /* Pods_Music_Serve.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,10 +34,13 @@
 		DC3076AC1FFEDA3400BC50EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC3076AF1FFEDA3400BC50EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC3076B11FFEDA3400BC50EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCA60FFF2010EB4B00687EF6 /* player.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = player.css; path = ../../../assets/player.css; sourceTree = "<group>"; };
-		DCA610002010EB4B00687EF6 /* jquery.cleanaudioplayer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.cleanaudioplayer.js; path = ../../../assets/jquery.cleanaudioplayer.js; sourceTree = "<group>"; };
-		DCA610012010EB4B00687EF6 /* jquery-1.11.3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-1.11.3.min.js"; path = "../../../assets/jquery-1.11.3.min.js"; sourceTree = "<group>"; };
 		DCA6100520116E3A00687EF6 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		DCF2998B2014929C009477F8 /* jquery-1.11.3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.3.min.js"; sourceTree = "<group>"; };
+		DCF2998C2014929C009477F8 /* jquery.cleanaudioplayer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.cleanaudioplayer.js; sourceTree = "<group>"; };
+		DCF2998D2014929C009477F8 /* player.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = player.css; sourceTree = "<group>"; };
+		DCF2999120149BD5009477F8 /* jquery.cleanaudioplayer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.cleanaudioplayer.js; sourceTree = "<group>"; };
+		DCF2999220149BD6009477F8 /* jquery-1.11.3.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.3.min.js"; sourceTree = "<group>"; };
+		DCF2999320149BD7009477F8 /* player.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				DC3076C91FFF03B300BC50EE /* assets */,
+				DCF2998A2014929C009477F8 /* assets */,
 				DC3076A11FFEDA3400BC50EE /* Music-Serve */,
 				DC3076A01FFEDA3400BC50EE /* Products */,
 				3D7D815784937A315A5FD428 /* Pods */,
@@ -89,9 +95,9 @@
 		DC3076A11FFEDA3400BC50EE /* Music-Serve */ = {
 			isa = PBXGroup;
 			children = (
-				DCA610012010EB4B00687EF6 /* jquery-1.11.3.min.js */,
-				DCA610002010EB4B00687EF6 /* jquery.cleanaudioplayer.js */,
-				DCA60FFF2010EB4B00687EF6 /* player.css */,
+				DCF2999220149BD6009477F8 /* jquery-1.11.3.min.js */,
+				DCF2999120149BD5009477F8 /* jquery.cleanaudioplayer.js */,
+				DCF2999320149BD7009477F8 /* player.css */,
 				DC3076A21FFEDA3400BC50EE /* AppDelegate.swift */,
 				DC3076A41FFEDA3400BC50EE /* ViewController.swift */,
 				DC3076A61FFEDA3400BC50EE /* Main.storyboard */,
@@ -109,6 +115,17 @@
 			children = (
 			);
 			path = assets;
+			sourceTree = "<group>";
+		};
+		DCF2998A2014929C009477F8 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2998B2014929C009477F8 /* jquery-1.11.3.min.js */,
+				DCF2998C2014929C009477F8 /* jquery.cleanaudioplayer.js */,
+				DCF2998D2014929C009477F8 /* player.css */,
+			);
+			name = assets;
+			path = ../../assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,11 +190,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF2999520149BED009477F8 /* jquery-1.11.3.min.js in Resources */,
+				DCF2998E2014929C009477F8 /* jquery-1.11.3.min.js in Resources */,
+				DCF2998F2014929C009477F8 /* jquery.cleanaudioplayer.js in Resources */,
+				DCF299902014929C009477F8 /* player.css in Resources */,
 				DC3076B01FFEDA3400BC50EE /* LaunchScreen.storyboard in Resources */,
-				DCA610032010EB4C00687EF6 /* jquery.cleanaudioplayer.js in Resources */,
 				DC3076AD1FFEDA3400BC50EE /* Assets.xcassets in Resources */,
-				DCA610022010EB4B00687EF6 /* player.css in Resources */,
-				DCA610042010EB4C00687EF6 /* jquery-1.11.3.min.js in Resources */,
+				DCF2999420149BED009477F8 /* jquery.cleanaudioplayer.js in Resources */,
 				DC3076A81FFEDA3400BC50EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

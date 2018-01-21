@@ -23,7 +23,36 @@ class Server
     var theIndexString : String = ""
     
     
-    func runServer() {
+    enum ExportError: Error {
+        case unableToCreateExporter
+    }
+    
+    
+    func export(assetURL: URL, completionHandler: @escaping (URL?, Error?) -> ()) {
+        let asset = AVURLAsset(url: assetURL)
+        guard let exporter = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetAppleM4A) else {
+            completionHandler(nil, ExportError.unableToCreateExporter)
+            return
+        }
+        
+        let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString).appendingPathExtension("m4a")
+        
+        exporter.outputURL = fileURL
+        exporter.outputFileType = AVFileType.m4a
+        
+        exporter.exportAsynchronously
+        {
+            if exporter.status == .completed {
+                completionHandler(fileURL as URL, nil)
+            } else {
+                completionHandler(nil, exporter.error)
+            }
+        }
+    }
+    
+        
+        
+    func runServer() -> String{
         //Media Item
         
         //Test song
@@ -31,6 +60,9 @@ class Server
         var songArtist : String = "chichi"
         var songAlbum : String = "chirdon"
         var songPath : String! = ""
+        var url : URL?
+        var path : URL!
+        var data : Data = Data.init()
         
         
         //Get the differents path
@@ -38,7 +70,10 @@ class Server
         let jqueryFile2Path : String = (mainBundle.path(forResource: "jquery.cleanaudioplayer", ofType: "js")?.description)!
         let playerCssPath : String = (mainBundle.path(forResource: "player", ofType: "css")?.description)!
         
-        
+        var str : String = ""
+        var str2 : String = ""
+        var exportSession : AVAssetExportSession
+    
         //Initialise the html
          theIndexString  = "<!DOCTYPE html>\n" +
             "<html lang=\"en\">\n" +
@@ -55,6 +90,7 @@ class Server
             "        <div class=\"mediatec-cleanaudioplayer\">\n" +
             "            <ul data-theme=\"default\" data-autoplay=\"true\">"
         
+        
         let mediaItems = MPMediaQuery.songs().items
         let mediaCollection = MPMediaItemCollection(items: mediaItems!)
         let items : MPMediaItem!
@@ -63,9 +99,52 @@ class Server
             songTitle = items.title!
             songArtist = items.artist!
             songAlbum = items.albumTitle!
-            songPath = (items.assetURL?.absoluteString)!
+    
+    
+            if let assetURL = items.assetURL {
+                export(assetURL: assetURL) { fileURL, error in
+                    guard let fileURL = fileURL, error == nil else {
+                        print("export failed: \(error)")
+                        return
+                    }
+                    
+                    // use fileURL of temporary file here
+                    path = fileURL
+                    songPath  = fileURL.absoluteString
+                    print("\(songPath!)")
+                    do
+                    {
+                     data = try Data.init(contentsOf: URL.init(string: songPath!)!)
+                    }
+                        
+                    catch let error as NSError {
+                        print("Ooops! Something went wrong: \(error)")
+                    }
+                    
+                  
+                }
+            }
             
-            theIndexString += "<li data-title=\"" + songTitle + "\" data-artist=\"" + songArtist + " (" + songAlbum + ")\" data-type=\"mp3\" data-url=\"" + songPath + "\" data-free=\"false\"></li>"
+           
+                
+                 print("DAtaa \(data)")
+            webServer.addHandler(forMethod: "GET", path: "/\(songPath!)", request: GCDWebServerRequest.self, processBlock: { (request : GCDWebServerRequest) -> GCDWebServerResponse? in
+                
+                self.theIndexString += "<li data-title=\"" + songTitle + "\" data-artist=\"" + songArtist + " (" + songAlbum + ")\" data-type=\"mp3\" data-url=\"" + songPath! + "\" data-free=\"false\"></li>"
+                 return GCDWebServerDataResponse(data:data, contentType: "audio/mpeg")
+            })
+                 self.webServer.addGETHandler(forPath: "/\(songPath!)",
+                 staticData: data,
+                 contentType: "audio/mpeg",
+                 cacheAge: 3600)
+        
+    
+
+            
+            
+
+            
+           
         }
        
         theIndexString += "</ul>\n" +
@@ -96,25 +175,21 @@ class Server
                                 staticData: (contentFile3.data(using: String.Encoding.utf8))!,
                                 contentType: "text/css",
                                 cacheAge: 3600)
-        webServer.addGETHandler(forPath: "/ipod-library://item/item.mp3",
-                                staticData: (contentFile3.data(using: String.Encoding.utf8))!,
-                                contentType: "audio/mpeg",
-                                cacheAge: 3600)
         
         
         
-        
-        //Default handler
+       //Default handler
         webServer.addHandler(forMethod: "GET", path: "/", request: GCDWebServerRequest.self, processBlock: {request in
             return GCDWebServerDataResponse(data:(self.theIndexString.data(using: String.Encoding.utf8))!, contentType: "text/html")})
         
-        
+
         
         //start Server
         webServer.start(withPort: 8080, bonjourName: "HelloWord")
         
         print("Visit \(webServer.serverURL) in your web browser")
         
+        return "ok"
     }
     
     func stopServ()
@@ -124,9 +199,29 @@ class Server
     }
     
     
+    /*func save(mediaItem: MPMediaItem) -> String?
+    {
+        let url = mediaItem.assetURL!
+
+        exporter.outputFileType = AVFileType.mp3
+        var fileUrl = Bundle.main.url(forResource: url.absoluteString, withExtension: ".mp3")
+     
+        exporter.outputURL = fileUrl
+     
+        return String (describing: fileUrl)
+        
+    }*/
+    
+    
+    }
+    
+    
+
+    
+    
     
 
     
     
 
-}
+

@@ -23,9 +23,7 @@ let serveur = Server()
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func stopServer(_ sender: UIButton) {
-        serveur.stopServ()
-    }
+
     @IBAction func startServer(_ sender: UIButton) {
        
         serveur.runServer()

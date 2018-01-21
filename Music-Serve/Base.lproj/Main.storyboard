@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJA-B3-jTc">
-                                <rect key="frame" x="90" y="204" width="143" height="54"/>
+                                <rect key="frame" x="108" y="269" width="104" height="30"/>
                                 <color key="backgroundColor" red="0.64663904910000003" green="0.21035289760000001" blue="0.72207599879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Lancer Serveur">
                                     <color key="titleColor" red="0.93570138420000004" green="1" blue="0.9653062335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
