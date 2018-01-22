@@ -19,6 +19,7 @@
 		DCF299902014929C009477F8 /* player.css in Resources */ = {isa = PBXBuildFile; fileRef = DCF2998D2014929C009477F8 /* player.css */; };
 		DCF2999420149BED009477F8 /* jquery.cleanaudioplayer.js in Resources */ = {isa = PBXBuildFile; fileRef = DCF2999120149BD5009477F8 /* jquery.cleanaudioplayer.js */; };
 		DCF2999520149BED009477F8 /* jquery-1.11.3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = DCF2999220149BD6009477F8 /* jquery-1.11.3.min.js */; };
+		DCFBD0012016207D008BECE0 /* bob.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCFBD0002016207B008BECE0 /* bob.mp3 */; };
 		FA390A7DFC6F1AF9C4F9CE50 /* Pods_Music_Serve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB77F4E44B2C0A951D96292E /* Pods_Music_Serve.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		DCF2999120149BD5009477F8 /* jquery.cleanaudioplayer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.cleanaudioplayer.js; sourceTree = "<group>"; };
 		DCF2999220149BD6009477F8 /* jquery-1.11.3.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.11.3.min.js"; sourceTree = "<group>"; };
 		DCF2999320149BD7009477F8 /* player.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = player.css; sourceTree = "<group>"; };
+		DCFBD0002016207B008BECE0 /* bob.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bob.mp3; path = ../../../../Downloads/bob.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		DC3076A11FFEDA3400BC50EE /* Music-Serve */ = {
 			isa = PBXGroup;
 			children = (
+				DCFBD0002016207B008BECE0 /* bob.mp3 */,
 				DCF2999220149BD6009477F8 /* jquery-1.11.3.min.js */,
 				DCF2999120149BD5009477F8 /* jquery.cleanaudioplayer.js */,
 				DCF2999320149BD7009477F8 /* player.css */,
@@ -196,6 +199,7 @@
 				DCF299902014929C009477F8 /* player.css in Resources */,
 				DC3076B01FFEDA3400BC50EE /* LaunchScreen.storyboard in Resources */,
 				DC3076AD1FFEDA3400BC50EE /* Assets.xcassets in Resources */,
+				DCFBD0012016207D008BECE0 /* bob.mp3 in Resources */,
 				DCF2999420149BED009477F8 /* jquery.cleanaudioplayer.js in Resources */,
 				DC3076A81FFEDA3400BC50EE /* Main.storyboard in Resources */,
 			);
